@@ -1,7 +1,7 @@
 # DevExtremeFilterHelper
-Process loadOptions.Filter from DevExtreme DataGrid control to Filtering on the Server Side
+Process `loadOptions.Filter` from DevExtreme DataGrid control to Filtering on the Server Side
 
-The DevExtremeFilterHelper converts the [loadOptions.Filter]([https://openai.com](https://js.devexpress.com/jQuery/Documentation/ApiReference/Data_Layer/CustomStore/LoadOptions/#filter)) into a Dictionary where
+The `DevExtremeFilterHelper` converts the [loadOptions.Filter]([https://openai.com](https://js.devexpress.com/jQuery/Documentation/ApiReference/Data_Layer/CustomStore/LoadOptions/#filter)) into a Dictionary where
 * Keys are the Binary filter like "=", "<>", ">", ">=", "<", "<=", "startswith", "endswith", "contains", "notcontains"
 * Values are Dictionaries where
   * Key: column name
