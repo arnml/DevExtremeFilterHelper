@@ -1,0 +1,36 @@
+﻿@using DevExtreme.AspNet.Mvc;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@(
+Html.DevExtreme().DataGrid<dgFilter.Models.CompanyUser>()
+    .DataSource(ds => ds.Mvc()
+        .Controller("Home")
+        .LoadAction("GetUsers")
+    )
+    .RemoteOperations(true)
+    .SearchPanel(searchPanel => searchPanel
+        .Visible(true)
+        .Width(240)
+        .Placeholder("Search...")
+    )
+    .FilterRow(filterRow => filterRow
+        .Visible(true)
+    )
+    .Columns(columns =>
+    {
+        //columns.AddFor(c => c.Id)
+        //.FilterOperations(new[] { GridFilterOperations.Equal });
+        columns.AddFor(c => c.FirstName)
+        .FilterOperations(new[] { GridFilterOperations.Equal });
+        columns.AddFor(c => c.LastName)
+        .FilterOperations(new[] { GridFilterOperations.Equal });
+        columns.AddFor(c => c.Email)
+        .FilterOperations(new[] { GridFilterOperations.Equal });
+        columns.AddFor(c => c.Password)
+        .FilterOperations(new[] { GridFilterOperations.Equal });
+        columns.AddFor(c => c.Address)
+        .FilterOperations(new[] { GridFilterOperations.Equal });
+    })
+)
