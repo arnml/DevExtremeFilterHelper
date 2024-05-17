@@ -24,6 +24,15 @@
                 new CompanyUser
                 {
                     Id = Guid.NewGuid(),
+                    FirstName = "John",
+                    LastName = "Markus",
+                    Email = "john.markus@example.com",
+                    Password = "password321",
+                    Address = "321 Sao Paulo, Sao Paulo, SP"
+                },
+                new CompanyUser
+                {
+                    Id = Guid.NewGuid(),
                     FirstName = "Jane",
                     LastName = "Smith",
                     Email = "jane.smith@example.com",
